@@ -206,9 +206,9 @@ const YourComponent = () => {
   useEffect(() => {
   },[])
   const requestSearch = (searchedVal) => {
-      setData(mockData)
+      setData(mockData);
       console.log(searchedVal);  
-      const filteredRows = data.filter((row) => {
+      const filteredRows = mockData.filter((row) => {
         const searchString = Object.values(row).toString().toLowerCase();
         return searchString.includes(searchedVal.toLowerCase());
       });
